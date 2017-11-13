@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('server/public'));
 
 //express routes
-// app.use('/dealers', dealers);
-// app.use('/orders', orders);
-// app.use('/products', products);
+app.use('/dealers', dealers);
+app.use('/orders', orders);
+app.use('/products', products);
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'public/views/index.html'));
